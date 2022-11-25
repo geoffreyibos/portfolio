@@ -1,0 +1,103 @@
+html {
+    height:100%;
+}
+
+body {
+    height:100%;
+}
+
+:root{
+    --hauteur-menu: 60px;     /* hauteur du menu */
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Georgia, Arial, Verdana, 'Courier New', sans-serif;
+	letter-spacing: 1px;
+	text-decoration: none;
+}
+
+/* Menu en haut */
+
+nav {
+    width: 100%;
+    font-size: 18px;
+    top: 0;
+    box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.3);    /* ombre juste en bas du menu */
+    height: var(--hauteur-menu);
+    background-color: rgba(13,39,46,255);    /* couleur de fond du menu */
+}
+
+nav > h1 {
+    color:white;
+    padding-top:1%;
+}
+
+/* Photos et textes principaux */
+
+#ubbOrange {
+    height: 74%;
+}
+
+#ubbOrange > #image {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+#ubbOrange > #texte {
+    display: flex;
+    justify-content: space-around;
+}
+
+#ubbOrange > #texte ul {
+    margin-left: 20px;
+}
+
+#ubbOrange > #texte ul li {
+    margin-bottom: 10px;
+}
+
+.savoir {
+    margin-top: 4%;
+}
+
+#texte .savoir .marge {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Bouton de retour vers la page d'accueil */
+
+div#bouton {
+    margin-top: 20px;
+}
+
+div#retour {
+    float: left;
+    margin-left: 30px;
+}
+
+div#contact {
+    float: right;
+    margin-right: 30px;
+}
+
+.button {
+    padding: 10px 40px;
+    border-radius: 10px;
+    font-size: 1.2vw;
+    color: white;
+    background-color: rgba(13,39,46,255);
+    border-bottom: 5px solid rgba(13,39,46,25);
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+}
+
+.button:hover {
+    transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+    border-bottom: 1px solid;
+}

@@ -1,0 +1,279 @@
+/* Formulaire de contact */
+
+html {
+    height:100%;
+}
+
+body {
+    background: rgb(63, 69, 66);
+    font-family: Georgia, Arial, Verdana, 'Courier New', sans-serif;
+	  letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    color: #303030;
+    height:100%;
+}
+
+#contact {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+#contact h2 {
+    
+}
+
+/*
+.contactez-moi {
+    width: 45%;
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 0 3% 0 3%;
+    background: white;
+    height:100%;
+    margin-left: 24%;
+}
+
+.contactez-moi > form {
+    height: 100%;
+}
+
+.contactez-moi > form > div#nom {
+    height:15%;
+}
+
+.contactez-moi > form > div#email {
+    height:15%;
+}
+
+.contactez-moi > form > div#message {
+    height:45%;
+}
+
+.contactez-moi > form > div#bouton {
+    height:12%;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+    
+form > div#nom > label, form > div#email > label {
+    height:25%;
+}
+
+form > div#message > label {
+    height:8%;
+}
+    
+form div > input, form div > textarea {
+    background: rgba(236,243,252,255);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+	letter-spacing: 1px;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25);
+}
+
+form div > input {
+    height: 45%;
+    padding-left: 10px;
+}
+    
+form div > textarea {
+    height: 80%;
+    padding: 10px;
+}
+    
+form div > input::placeholder {
+    color: rgba(0, 0, 0, 0.474);
+}
+    
+form div:last-child {
+    align-items:center;
+}
+    
+form button {
+    width: 46%;
+    height: 60%;
+    font-size: 1.7vw;
+    background: rgba(68,68,68,255);
+    border: rgba(48, 48, 48, 0.5) solid 1px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    color: rgba(255, 255, 255, 0.808);
+	letter-spacing: 1px;
+}
+
+form button:hover {
+    color:white;
+    cursor:pointer;
+}
+*/
+
+/* Bouton de retour vers la page d'accueil */
+
+.centerBox {
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    float:right;
+    margin-left:3%;
+}
+  
+.categoryWrapper {
+    height: 25%;
+    width: 300px;
+    padding-bottom: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categoryWrapper h1 {
+    color:white;
+    font-size: 2vw;
+    letter-spacing: 1px;
+    -webkit-transition: all 0.15s ease 0s; 
+    z-index: 10;
+}
+  
+.categoryWrapper:hover h1 {
+    transform: translateY(-10px);
+}
+  
+.categoryWrapper button {
+    position: absolute;
+    transform: translatey(60px);
+    -webkit-appearance: none;
+    border: none;
+    background: none;
+    color:white;
+    width: 16%;
+    height:7%;
+    font-size: 1.5vw;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    z-index: 10;
+}
+  
+.categoryWrapper button span {
+    display: block;
+    position: relative;
+    line-height: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+  
+.categoryWrapper button > a > span:after {
+    content:'';
+    position: absolute;
+    top:0;
+    left: 50%;
+    width: 9%;
+    height: 0;
+    border: 1px solid white;
+    border-left: none;
+    border-bottom: none;
+    transition: height 0.15s ease-out, width 0.15s ease-out 0.15s;
+}
+  
+.categoryWrapper:hover button > a > span:after {
+    width: calc(50% - 1px);
+    height: calc(100% - 2px);
+    transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
+}
+  
+.categoryWrapper button > a > span:before {
+    content:'';
+    position: absolute;
+    top:0;
+    right: 50%;
+    width: 20px;
+    height: 0;
+    border: 1px solid white;
+    border-right: none;
+    border-bottom: none;
+    transition: height 0.15s ease-out, width 0.15s ease-out 0.15s;
+}
+  
+.categoryWrapper:hover button > a > span:before {
+    width: calc(50% - 1px);
+    height: calc(100% - 2px);
+    transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
+}
+  
+.categoryWrapper button > a > span > span:before {
+    content:'';
+    position: absolute;
+    bottom:0;
+    right: 0%;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+  
+.categoryWrapper:hover button > a > span > span:before {
+    opacity: 1;
+    border-bottom: 1px solid white;
+    width: calc(50%);
+    height: 1px;
+    transition: opacity 0s ease-out 0.29s, width 0.15s ease-out 0.3s;
+}
+  
+.categoryWrapper button > a > span > span:after {
+    content:'';
+    position: absolute;
+    bottom:0;
+    left: 0%;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+  
+.categoryWrapper:hover button > a > span > span:after {
+    opacity: 1;
+    border-bottom: 1px solid white;
+    width: calc(50%);
+    height: 1px;
+    transition: opacity 0s ease-out 0.29s, width 0.15s ease-out 0.3s;
+}
+  
+.categoryWrapper button > a > span > span > span {
+    transition: color 0.15s ease-out 0.3s;
+    color: transparent;
+}
+  
+.categoryWrapper button > a > span > span > span:after {
+    position: absolute;
+    top:0;left:0;right:0;bottom:0;
+    color:#1f2e4d;
+    content: attr(data-attr-span);
+    width: 0%;
+    height: 100%;
+    background:white;
+    white-space: nowrap;
+    text-align: center;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    transition: width 0.2s;
+}
+  
+.categoryWrapper button:hover > a > span > span > span:after {
+    width: 100%;
+}
+
+.categoryWrapper button > a > span > span > span {
+    display:none;
+}
+
+.categoryWrapper:hover button > a > span > span > span, .centerBox > .categoryWrapper:hover button > a > span > span > span {
+    display:block;
+    color:white;
+    text-decoration: underline;
+}

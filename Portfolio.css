@@ -1,0 +1,83 @@
+* {
+    font-family: Georgia, Arial, Verdana, 'Courier New', sans-serif;
+	letter-spacing: 1px;
+	text-decoration: none;
+    background-color: rgba(13,39,46,255);    /* couleur de fond du menu */;
+}
+
+html {
+    height:100%;
+}
+
+body {
+    height:100%;
+}
+
+div#haut, div#bas {
+    height:10%;
+}
+
+nav {
+    font-size: 22px;
+    height: 1%;
+}
+
+nav > ul {
+    height:20%;
+}
+  
+nav > ul > div#un, nav > ul > div#suiv {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    height:10%;
+}
+
+body > div#haut > nav > ul > div#deux > li, body > div#bas > nav > ul > div#prec > li {
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    height:10%;
+    margin-left:30px;
+}
+nav > ul div#deux, nav > ul > div#prec {
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    height:10%;
+}
+
+nav > ul > div#un > li > a, nav > ul > div#deux > li > a, nav > ul > div#suiv > li > a, nav > ul > div#prec > li > a {
+    transform: translate(-50%, -50%);
+    color:rgba(255, 255, 255, 0.808);    /* couleur des texte du menu */
+}
+
+nav > ul > div#un > li > a:hover, nav > ul > div#deux > li > a:hover, nav > ul > div#suiv > li > a:hover, 
+nav > ul > div#prec > li > a:hover {
+    color: white;      /* met les titres de menu en blanc quand ils sont survolés par la souris */
+}
+
+nav > ul > div#un > li > a#menu4::after, nav > ul > div#deux > li > a#menu4::after, 
+nav > ul > div#suiv > li > a#s::after, nav > ul > div#prec > li > a#p::after {     /* permet d'avoir un effet de style pour Me contacter et Page d'accueil */
+    content: '';                                                     
+    display: block;
+    margin: auto;
+    height: 1px;
+    width: 0;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+nav > ul > div#un > li > a#menu4:hover::after, nav > ul > div#deux > li > a#menu4:hover::after,
+nav > ul > div#suiv > li > a#s:hover::after, nav > ul > div#prec > li > a#p:hover::after {     /* permet de souligner Me contacter et Page d'accueil */
+    width: 100%;
+    background: white;
+}
+
+div#haut > h1 {
+    display:flex;
+    justify-content: center;
+    margin-top: 0px;
+    margin-left:1%;
+    color:white;
+    font-size: 2vw;
+}

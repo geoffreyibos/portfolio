@@ -1,0 +1,211 @@
+html {
+    height:100%;
+}
+
+body {
+    height:100%;
+}
+
+:root{
+    --hauteur-menu: 60px;     /* hauteur du menu */
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Georgia, Arial, Verdana, 'Courier New', sans-serif;
+	letter-spacing: 1px;
+	text-decoration: none;
+}
+
+/* Menu en haut */
+
+nav {
+    width: 100%;
+    font-size: 18px;
+    top: 0;
+}
+
+nav > ul {
+    display: flex;
+    text-align: center;
+    box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.3);    /* ombre juste en bas du menu */
+    height: var(--hauteur-menu);
+}
+
+nav ul {
+    list-style-type: none;
+}
+  
+nav > ul > li {
+    background-color: rgba(13,39,46,255);    /* couleur de fond du menu */
+    position: relative;
+    height: 100%;
+    flex: 1;
+}
+
+nav > ul > li > a, nav > ul > li > div.deroule > a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:rgba(255, 255, 255, 0.808);    /* couleur des texte du menu */
+}
+  
+li a {
+    text-decoration: none;  
+    color: black;   /* couleur des textes dans le menu déroulant */
+}
+
+.menu-deroulant > div.deroule > a:after{
+    content: '❯';    /* crée la flèche à côté du menu Portfolio */
+    font-size: 15px;
+    margin-left: 7px;
+    display: inline-block;
+}
+
+.sous-menu {
+    margin-top: var(--hauteur-menu);
+    width: 100%;
+    text-align: left;
+    background-color: white;     /* couleur du fond dans le menu déroulant */
+    border-radius: 2px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 200px;
+    font-size: 1.2vw;
+}
+  
+.sous-menu > li > a {
+    height: 50px;
+    padding-left: 20px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+}
+
+nav > ul > li > a:hover, nav > ul > li:hover > div.deroule > a {
+    color: white;      /* met les titres de menu en blanc quand ils sont survolés par la souris */
+}
+
+.sous-menu > li:hover {
+    background-color: rgba(33, 105, 236, 0.3);    /* couleur du fond des éléments du menu Portfolio lorsque la souris les survol */
+}
+  
+.sous-menu li > a:hover {
+    color: white;    /* couleur des éléments du menu Portfolio lorsque la souris les survol */
+}
+
+@keyframes rotationFleche {     /* animation pour faire tourner la flèche de Portfolio vers le bas */
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+nav > ul > li:hover > div.deroule > a:after {
+    animation: rotationFleche 0.2s linear forwards;     /* la flèche à côté de Portfolio est tournée vers le bas quand on pointe la souris sur le menu */
+}
+
+@keyframes apparitionSousMenu {     /* animation pour l'apparition du menu */
+    0% {
+        box-shadow: 0px 3px 3px 1px rgba(0,0,0,0);
+        border-top: 3px solid #2169EC;
+    }
+    30% {
+        box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+    }
+    100% {
+        max-height: 50em;
+        border-top: 3px solid #2169EC;
+        box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+    }
+}
+
+nav > ul > li .sous-menu {
+    display:none;     /* le menu déroulant est replié */
+}
+
+nav > ul > li:hover .sous-menu {
+    display:block;
+    animation: apparitionSousMenu 1s forwards;     /* le menu déroulant se déplie quand on survol Portfolio avec la souris */
+}
+
+nav > ul > li > a#menu1::after {     /* permet d'avoir un effet de style pour souligner Expérience Professionnelle */
+    content: '';
+    display: block;
+    margin: auto;
+    height: 1px;
+    width: 0;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+nav > ul > li > a#menu1:hover::after {    /* permet de souligner Expérience Professionnelle */
+    width: 66%;
+    background: white;
+}
+
+nav > ul > li > a#menu3::after, nav > ul > li > a#menu4::after {     /* permet d'avoir un effet de style pour */
+    content: '';                                                     /* souligner Loisirs et Me contacter */
+    display: block;
+    margin: auto;
+    height: 1px;
+    width: 0;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+nav > ul > li > a#menu3:hover::after, nav > ul > li > a#menu4:hover::after {     /* permet de souligner Loisirs et Me contacter */
+    width: 100%;
+    background: white;
+}
+
+/* Placement des images et des textes */
+
+/*
+#flex > #parcours {
+    float:left;
+    margin-left:3%;
+    margin-top: 4%;
+}
+
+#flex > #photo {
+    float:right;
+    margin-right:20%;
+    margin-top:12%;
+}
+*/
+
+#flex {
+    display: flex;
+    height: 75%;
+    margin-top: 2%;
+}
+
+#flex #elt1 {
+    display: flex;
+    margin-left: 4%;
+}
+
+#flex #elt2 {
+    display: block;
+    align-items: center;
+    margin-top: 4%;
+}
+
+#pres {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width:1200px) {
+
+    #flex {
+      display: block;
+    }
+
+    #flex #elt2 {
+        width: 50%;
+    }
+}
